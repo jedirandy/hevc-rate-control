@@ -1,0 +1,64 @@
+﻿Build started 11/24/2013 21:30:15.
+     1>Project "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\vc10\TLibCommon_vc10.vcxproj" on node 5 (Build target(s)).
+     1>ClCompile:
+         D:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\..\source\Lib\\" /I"C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\..\compat\msvc" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _CRT_SECURE_NO_WARNINGS /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibCommon\\" /Fd"C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibCommon\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\source\Lib\TLibCommon\ContextModel.cpp ..\..\source\Lib\TLibCommon\ContextModel3DBuffer.cpp ..\..\source\Lib\TLibCommon\SEI.cpp ..\..\source\Lib\TLibCommon\TComBitStream.cpp ..\..\source\Lib\TLibCommon\TComCABACTables.cpp ..\..\source\Lib\TLibCommon\TComDataCU.cpp ..\..\source\Lib\TLibCommon\TComInterpolationFilter.cpp ..\..\source\Lib\TLibCommon\TComLoopFilter.cpp ..\..\source\Lib\TLibCommon\TComMotionInfo.cpp ..\..\source\Lib\TLibCommon\TComPattern.cpp ..\..\source\Lib\TLibCommon\TComPic.cpp ..\..\source\Lib\TLibCommon\TComPicSym.cpp ..\..\source\Lib\TLibCommon\TComPicYuv.cpp ..\..\source\Lib\TLibCommon\TComPicYuvMD5.cpp ..\..\source\Lib\TLibCommon\TComPrediction.cpp ..\..\source\Lib\TLibCommon\TComRdCost.cpp ..\..\source\Lib\TLibCommon\TComRdCostWeightPrediction.cpp ..\..\source\Lib\TLibCommon\TComRom.cpp ..\..\source\Lib\TLibCommon\TComSampleAdaptiveOffset.cpp ..\..\source\Lib\TLibCommon\TComSlice.cpp ..\..\source\Lib\TLibCommon\TComTrQuant.cpp ..\..\source\Lib\TLibCommon\TComWeightPrediction.cpp ..\..\source\Lib\TLibCommon\TComYuv.cpp
+         TComYuv.cpp
+         TComWeightPrediction.cpp
+         TComTrQuant.cpp
+         TComSlice.cpp
+     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibcommon\tcomslice.cpp : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+         TComSampleAdaptiveOffset.cpp
+         TComRom.cpp
+         TComRdCostWeightPrediction.cpp
+         TComRdCost.cpp
+         TComPrediction.cpp
+         TComPicYuvMD5.cpp
+         TComPicYuv.cpp
+         TComPicSym.cpp
+         TComPic.cpp
+         TComPattern.cpp
+         TComMotionInfo.cpp
+         TComLoopFilter.cpp
+         TComInterpolationFilter.cpp
+         TComDataCU.cpp
+         TComCABACTables.cpp
+         TComBitStream.cpp
+         Generating Code...
+         Compiling...
+         SEI.cpp
+         ContextModel3DBuffer.cpp
+         ContextModel.cpp
+         Generating Code...
+         D:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\..\source\Lib\\" /I"C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\..\compat\msvc" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _CRT_SECURE_NO_WARNINGS /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibCommon\\" /Fd"C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibCommon\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt ..\..\source\Lib\libmd5\libmd5.c
+         libmd5.c
+       Lib:
+         D:\Program Files\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibCommon\TLibCommon.lib" /NOLOGO "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibCommon\ContextModel.obj"
+         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibCommon\ContextModel3DBuffer.obj"
+         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibCommon\libmd5.obj"
+         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibCommon\SEI.obj"
+         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibCommon\TComBitStream.obj"
+         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibCommon\TComCABACTables.obj"
+         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibCommon\TComDataCU.obj"
+         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibCommon\TComInterpolationFilter.obj"
+         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibCommon\TComLoopFilter.obj"
+         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibCommon\TComMotionInfo.obj"
+         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibCommon\TComPattern.obj"
+         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibCommon\TComPic.obj"
+         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibCommon\TComPicSym.obj"
+         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibCommon\TComPicYuv.obj"
+         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibCommon\TComPicYuvMD5.obj"
+         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibCommon\TComPrediction.obj"
+         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibCommon\TComRdCost.obj"
+         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibCommon\TComRdCostWeightPrediction.obj"
+         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibCommon\TComRom.obj"
+         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibCommon\TComSampleAdaptiveOffset.obj"
+         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibCommon\TComSlice.obj"
+         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibCommon\TComTrQuant.obj"
+         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibCommon\TComWeightPrediction.obj"
+         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibCommon\TComYuv.obj"
+         TLibCommon_vc10.vcxproj -> C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibCommon\TLibCommon.lib
+     1>Done Building Project "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\vc10\TLibCommon_vc10.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:25.79
