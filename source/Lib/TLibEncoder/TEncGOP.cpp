@@ -768,13 +768,10 @@ Void TEncGOP::compressGOP( Int iPOCLast, Int iNumPicRcvd, TComList<TComPic*>& rc
       sliceQP = Clip3( -pcSlice->getSPS()->getQpBDOffsetY(), MAX_QP, sliceQP );
       m_pcRateCtrl->getRCPic()->setPicEstQP( sliceQP );
       
-      m_pcSliceEncoder->resetQP( pcPic, sliceQP, lambda ); // Update QP here
+//      m_pcSliceEncoder->resetQP( pcPic, sliceQP, lambda ); // Update QP here
     }
 #endif
 
-	// # new
-	// Int sliceQP = m_pcRateCtrl->getRCPic()->estimatePicQP();
-	
     UInt uiNumSlices = 1;
     
     UInt uiInternalAddress = pcPic->getNumPartInCU()-4;
@@ -1693,6 +1690,11 @@ Void TEncGOP::compressGOP( Int iPOCLast, Int iNumPicRcvd, TComList<TComPic*>& rc
         m_pcRateCtrl->getRCGOP()->updateAfterPicture( estimatedBits );
       }
     }
+	if(m_pcCfg->getUseRateCtrl())
+	{
+		UInt  frameBits = m_vRVM_RP[m_vRVM_RP.size()-1];
+		m_pcRateCtrl->updataRCFrameStatus((Int)frameBits, pcSlice->getSliceType());
+	}
 #else
     if(m_pcCfg->getUseRateCtrl())
     {
@@ -1880,7 +1882,7 @@ Void TEncGOP::compressGOP( Int iPOCLast, Int iNumPicRcvd, TComList<TComPic*>& rc
     
     delete[] pcSubstreamsOut;
   }
-#if !RATE_CONTROL_LAMBDA_DOMAIN
+#if RATE_CONTROL_LAMBDA_DOMAIN
   if(m_pcCfg->getUseRateCtrl())
   {
     m_pcRateCtrl->updateRCGOPStatus();

@@ -52,7 +52,7 @@
 #define MAX_VPS_OP_SETS_PLUS1                     1024
 #define MAX_VPS_NUH_RESERVED_ZERO_LAYER_ID_PLUS1  1
 
-#define RATE_CONTROL_LAMBDA_DOMAIN                  0  ///< JCTVC-K0103, rate control by R-lambda model
+#define RATE_CONTROL_LAMBDA_DOMAIN                  1  ///< JCTVC-K0103, rate control by R-lambda model
 #define M0036_RC_IMPROVEMENT                        1  ///< JCTVC-M0036, improvement for R-lambda model based rate control
 #define RATE_CONTROL_MULTI_LAYER				    1  ///< Multi layer based rate control
 #define TICKET_1090_FIX                             1
