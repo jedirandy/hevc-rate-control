@@ -433,7 +433,9 @@ Bool TAppEncCfg::parseCfg( Int argc, Char* argv[] )
   ( "InitialQP",           m_RCInitialQP,               0, "Rate control: initial QP" )
   ( "RCForceIntraQP",      m_RCForceIntraQP,        false, "Rate control: force intra QP to be equal to initial QP" )
 #else
-  ("RateCtrl,-rc", m_enableRateCtrl, false, "Rate control on/off")
+  //("RateCtrl,-rc", m_enableRateCtrl, false, "Rate control on/off")
+  //("TargetBitrate,-tbr", m_targetBitrate, 0, "Input target bitrate")
+  ("RateControl,-rc", m_enableRateCtrl, false, "Rate control on/off")
   ("TargetBitrate,-tbr", m_targetBitrate, 0, "Input target bitrate")
   ("NumLCUInUnit,-nu", m_numLCUInUnit, 0, "Number of LCUs in an Unit")
 #endif

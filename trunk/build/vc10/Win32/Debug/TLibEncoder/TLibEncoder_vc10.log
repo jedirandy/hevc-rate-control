@@ -1,109 +1,35 @@
-﻿Build started 11/26/2013 09:29:15.
+﻿Build started 11/28/2013 18:20:24.
      1>Project "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\vc10\TLibEncoder_vc10.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         D:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\..\source\Lib\\" /I"C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\..\compat\msvc" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _CRT_SECURE_NO_WARNINGS /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibEncoder\\" /Fd"C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibEncoder\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\source\Lib\TLibEncoder\NALwrite.cpp ..\..\source\Lib\TLibEncoder\SEIwrite.cpp ..\..\source\Lib\TLibEncoder\SyntaxElementWriter.cpp ..\..\source\Lib\TLibEncoder\TEncAnalyze.cpp ..\..\source\Lib\TLibEncoder\TEncBinCoderCABAC.cpp ..\..\source\Lib\TLibEncoder\TEncBinCoderCABACCounter.cpp ..\..\source\Lib\TLibEncoder\TEncCavlc.cpp ..\..\source\Lib\TLibEncoder\TEncCu.cpp ..\..\source\Lib\TLibEncoder\TEncEntropy.cpp ..\..\source\Lib\TLibEncoder\TEncGOP.cpp ..\..\source\Lib\TLibEncoder\TEncPic.cpp ..\..\source\Lib\TLibEncoder\TEncPreanalyzer.cpp ..\..\source\Lib\TLibEncoder\TEncRateCtrl.cpp ..\..\source\Lib\TLibEncoder\TEncSampleAdaptiveOffset.cpp ..\..\source\Lib\TLibEncoder\TEncSbac.cpp ..\..\source\Lib\TLibEncoder\TEncSearch.cpp ..\..\source\Lib\TLibEncoder\TEncSlice.cpp ..\..\source\Lib\TLibEncoder\TEncTop.cpp ..\..\source\Lib\TLibEncoder\WeightPredAnalysis.cpp
-         WeightPredAnalysis.cpp
-         TEncTop.cpp
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.h(602): error C3867: 'TEncRCSeq::getTotalFrames': function call missing argument list; use '&TEncRCSeq::getTotalFrames' to create a pointer to member
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.h(602): error C3867: 'TEncRCSeq::getFramesLeft': function call missing argument list; use '&TEncRCSeq::getFramesLeft' to create a pointer to member
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.h(602): error C2296: '-' : illegal, left operand has type 'Int (__thiscall TEncRCSeq::* )(void)'
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.h(602): error C2297: '-' : illegal, right operand has type 'Int (__thiscall TEncRCSeq::* )(void)'
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tenctop.cpp(121): error C2039: 'create' : is not a member of 'TEncRateCtrl'
-                 c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.h(735) : see declaration of 'TEncRateCtrl'
-         TEncSlice.cpp
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.h(602): error C3867: 'TEncRCSeq::getTotalFrames': function call missing argument list; use '&TEncRCSeq::getTotalFrames' to create a pointer to member
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.h(602): error C3867: 'TEncRCSeq::getFramesLeft': function call missing argument list; use '&TEncRCSeq::getFramesLeft' to create a pointer to member
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.h(602): error C2296: '-' : illegal, left operand has type 'Int (__thiscall TEncRCSeq::* )(void)'
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.h(602): error C2297: '-' : illegal, right operand has type 'Int (__thiscall TEncRCSeq::* )(void)'
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencslice.cpp(265): error C2039: 'getFrameQP' : is not a member of 'TEncRateCtrl'
-                 c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.h(735) : see declaration of 'TEncRateCtrl'
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencslice.cpp(974): error C2039: 'calculateUnitQP' : is not a member of 'TEncRateCtrl'
-                 c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.h(735) : see declaration of 'TEncRateCtrl'
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencslice.cpp(976): error C2039: 'getUnitQP' : is not a member of 'TEncRateCtrl'
-                 c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.h(735) : see declaration of 'TEncRateCtrl'
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencslice.cpp(976): error C2039: 'getGOPId' : is not a member of 'TEncRateCtrl'
-                 c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.h(735) : see declaration of 'TEncRateCtrl'
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencslice.cpp(976): error C2660: 'TEncSlice::xLamdaRecalculation' : function does not take 5 arguments
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencslice.cpp(1257): error C2039: 'updateLCUData' : is not a member of 'TEncRateCtrl'
-                 c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.h(735) : see declaration of 'TEncRateCtrl'
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencslice.cpp(1258): error C2039: 'updataRCUnitStatus' : is not a member of 'TEncRateCtrl'
-                 c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.h(735) : see declaration of 'TEncRateCtrl'
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencslice.cpp(1278): error C2039: 'updateFrameData' : is not a member of 'TEncRateCtrl'
-                 c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.h(735) : see declaration of 'TEncRateCtrl'
-         TEncSearch.cpp
-         TEncSbac.cpp
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.h(602): error C3867: 'TEncRCSeq::getTotalFrames': function call missing argument list; use '&TEncRCSeq::getTotalFrames' to create a pointer to member
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.h(602): error C3867: 'TEncRCSeq::getFramesLeft': function call missing argument list; use '&TEncRCSeq::getFramesLeft' to create a pointer to member
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.h(602): error C2296: '-' : illegal, left operand has type 'Int (__thiscall TEncRCSeq::* )(void)'
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.h(602): error C2297: '-' : illegal, right operand has type 'Int (__thiscall TEncRCSeq::* )(void)'
-         TEncSampleAdaptiveOffset.cpp
+         D:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\..\source\Lib\\" /I"C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\..\compat\msvc" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _CRT_SECURE_NO_WARNINGS /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibEncoder\\" /Fd"C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibEncoder\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\source\Lib\TLibEncoder\TEncRateCtrl.cpp
          TEncRateCtrl.cpp
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.h(602): error C3867: 'TEncRCSeq::getTotalFrames': function call missing argument list; use '&TEncRCSeq::getTotalFrames' to create a pointer to member
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.h(602): error C3867: 'TEncRCSeq::getFramesLeft': function call missing argument list; use '&TEncRCSeq::getFramesLeft' to create a pointer to member
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.h(602): error C2296: '-' : illegal, left operand has type 'Int (__thiscall TEncRCSeq::* )(void)'
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.h(602): error C2297: '-' : illegal, right operand has type 'Int (__thiscall TEncRCSeq::* )(void)'
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.cpp(1838): error C3867: 'std::vector<TRCGOPParam,std::allocator<_Ty>>::size': function call missing argument list; use '&std::vector<TRCGOPParam,std::allocator<_Ty>>::size' to create a pointer to member
-                 with
-                 [
-                     _Ty=TRCGOPParam
-                 ]
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.cpp(1838): error C2296: '>' : illegal, left operand has type 'unsigned int (__thiscall std::vector<TRCGOPParam,std::allocator<_Ty>>::* )(void) throw() const'
-                 with
-                 [
-                     _Ty=TRCGOPParam
-                 ]
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.cpp(1838): error C2297: '>' : illegal, right operand has type 'unsigned int (__thiscall std::vector<TRCGOPParam,std::allocator<_Ty>>::* )(void) throw() const'
-                 with
-                 [
-                     _Ty=TRCGOPParam
-                 ]
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.cpp(2133): error C2374: 'targetBits' : redefinition; multiple initialization
-                 c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.cpp(2124) : see declaration of 'targetBits'
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.cpp(2133): warning C4244: 'initializing' : conversion from 'Int64' to 'Int', possible loss of data
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.cpp(2140): warning C4244: '=' : conversion from 'Double' to 'Int', possible loss of data
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.cpp(2222): error C2228: left of '.at' must have class/struct/union
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.cpp(2222): error C2228: left of '.m_alpha' must have class/struct/union
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.cpp(2225): error C2228: left of '.at' must have class/struct/union
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.cpp(2225): error C2228: left of '.m_alpha' must have class/struct/union
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.cpp(2226): error C2228: left of '.at' must have class/struct/union
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.cpp(2226): error C2228: left of '.m_alpha' must have class/struct/union
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.cpp(2227): error C2228: left of '.at' must have class/struct/union
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.cpp(2227): error C2228: left of '.m_alpha' must have class/struct/union
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.cpp(2229): error C2228: left of '.at' must have class/struct/union
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.cpp(2229): error C2228: left of '.m_alpha' must have class/struct/union
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.cpp(2230): error C3867: 'TEncRCGOP::getTargetBits': function call missing argument list; use '&TEncRCGOP::getTargetBits' to create a pointer to member
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.cpp(2230): error C2297: '*' : illegal, right operand has type 'Int (__thiscall TEncRCGOP::* )(void)'
-         TEncPreanalyzer.cpp
-         TEncPic.cpp
-         TEncGOP.cpp
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.h(602): error C3867: 'TEncRCSeq::getTotalFrames': function call missing argument list; use '&TEncRCSeq::getTotalFrames' to create a pointer to member
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.h(602): error C3867: 'TEncRCSeq::getFramesLeft': function call missing argument list; use '&TEncRCSeq::getFramesLeft' to create a pointer to member
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.h(602): error C2296: '-' : illegal, left operand has type 'Int (__thiscall TEncRCSeq::* )(void)'
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.h(602): error C2297: '-' : illegal, right operand has type 'Int (__thiscall TEncRCSeq::* )(void)'
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencgop.cpp(1700): error C2039: 'updataRCFrameStatus' : is not a member of 'TEncRateCtrl'
-                 c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.h(735) : see declaration of 'TEncRateCtrl'
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencgop.cpp(1886): error C2039: 'updateRCGOPStatus' : is not a member of 'TEncRateCtrl'
-                 c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.h(735) : see declaration of 'TEncRateCtrl'
-         TEncEntropy.cpp
-         TEncCu.cpp
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.h(602): error C3867: 'TEncRCSeq::getTotalFrames': function call missing argument list; use '&TEncRCSeq::getTotalFrames' to create a pointer to member
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.h(602): error C3867: 'TEncRCSeq::getFramesLeft': function call missing argument list; use '&TEncRCSeq::getFramesLeft' to create a pointer to member
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.h(602): error C2296: '-' : illegal, left operand has type 'Int (__thiscall TEncRCSeq::* )(void)'
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.h(602): error C2297: '-' : illegal, right operand has type 'Int (__thiscall TEncRCSeq::* )(void)'
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tenccu.cpp(417): error C2039: 'getUnitQP' : is not a member of 'TEncRateCtrl'
-                 c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.h(735) : see declaration of 'TEncRateCtrl'
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tenccu.cpp(746): error C2039: 'getUnitQP' : is not a member of 'TEncRateCtrl'
-                 c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.h(735) : see declaration of 'TEncRateCtrl'
-         TEncCavlc.cpp
-         TEncBinCoderCABACCounter.cpp
-         TEncBinCoderCABAC.cpp
-         TEncAnalyze.cpp
-         SyntaxElementWriter.cpp
-         SEIwrite.cpp
-         NALwrite.cpp
-         Generating Code...
-     1>Done Building Project "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\vc10\TLibEncoder_vc10.vcxproj" (Build target(s)) -- FAILED.
+     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.cpp(105): warning C4244: '=' : conversion from 'double' to 'Int', possible loss of data
+     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.cpp(535): warning C4244: '=' : conversion from 'Int64' to 'Int', possible loss of data
+     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.cpp(542): warning C4244: '=' : conversion from 'Double' to 'Int', possible loss of data
+     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.cpp(1963): warning C4244: '=' : conversion from 'Double' to 'Int', possible loss of data
+       Lib:
+         D:\Program Files\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibEncoder\TLibEncoder.lib" /NOLOGO "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibEncoder\NALwrite.obj"
+         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibEncoder\SEIwrite.obj"
+         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibEncoder\SyntaxElementWriter.obj"
+         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibEncoder\TEncAnalyze.obj"
+         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibEncoder\TEncBinCoderCABAC.obj"
+         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibEncoder\TEncBinCoderCABACCounter.obj"
+         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibEncoder\TEncCavlc.obj"
+         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibEncoder\TEncCu.obj"
+         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibEncoder\TEncEntropy.obj"
+         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibEncoder\TEncGOP.obj"
+         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibEncoder\TEncPic.obj"
+         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibEncoder\TEncPreanalyzer.obj"
+         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibEncoder\TEncRateCtrl.obj"
+         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibEncoder\TEncSampleAdaptiveOffset.obj"
+         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibEncoder\TEncSbac.obj"
+         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibEncoder\TEncSearch.obj"
+         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibEncoder\TEncSlice.obj"
+         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibEncoder\TEncTop.obj"
+         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibEncoder\WeightPredAnalysis.obj"
+         TLibEncoder_vc10.vcxproj -> C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibEncoder\TLibEncoder.lib
+     1>Done Building Project "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\vc10\TLibEncoder_vc10.vcxproj" (Build target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:28.51
+Time Elapsed 00:00:02.59

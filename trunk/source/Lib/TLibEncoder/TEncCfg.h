@@ -282,6 +282,8 @@ protected:
   Bool      m_RCUseLCUSeparateModel;
   Int       m_RCInitialQP;
   Bool      m_RCForceIntraQP;
+
+  Int       m_numLCUInUnit;                                  ///< Total number of LCUs in a frame should be divided by the NumLCUInUnit
 #else
   Bool      m_enableRateCtrl;                                ///< Flag for using rate control algorithm
   Int       m_targetBitrate;                                 ///< target bitrate
@@ -677,6 +679,8 @@ public:
   Void      setInitialQP           ( Int QP )      { m_RCInitialQP = QP;             }
   Bool      getForceIntraQP        ()              { return m_RCForceIntraQP;        }
   Void      setForceIntraQP        ( Bool b )      { m_RCForceIntraQP = b;           }
+  Int       getNumLCUInUnit   ()                { return m_numLCUInUnit;      }
+  Void      setNumLCUInUnit   (Int numLCUs)     { m_numLCUInUnit   = numLCUs; }
 #else
   Bool      getUseRateCtrl    ()                { return m_enableRateCtrl;    }
   Void      setUseRateCtrl    (Bool flag)       { m_enableRateCtrl = flag;    }
