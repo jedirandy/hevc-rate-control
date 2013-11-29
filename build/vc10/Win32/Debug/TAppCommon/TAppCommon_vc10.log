@@ -1,13 +1,13 @@
-﻿Build started 11/24/2013 21:48:11.
-     1>Project "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\vc10\TAppCommon_vc10.vcxproj" on node 2 (Build target(s)).
+﻿Build started 11/28/2013 20:51:31.
+     1>Project "D:\workspace\hevc-rate-control\build\vc10\TAppCommon_vc10.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         D:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\..\source\Lib\\" /I"C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\..\compat\msvc" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _CRT_SECURE_NO_WARNINGS /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TAppCommon\\" /Fd"C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TAppCommon\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\source\Lib\TAppCommon\program_options_lite.cpp
+         D:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\workspace\hevc-rate-control\build\\..\source\Lib\\" /I"D:\workspace\hevc-rate-control\build\\..\compat\msvc" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _CRT_SECURE_NO_WARNINGS /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"D:\workspace\hevc-rate-control\build\\vc10\Win32\Debug\TAppCommon\\" /Fd"D:\workspace\hevc-rate-control\build\\vc10\Win32\Debug\TAppCommon\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\source\Lib\TAppCommon\program_options_lite.cpp
          program_options_lite.cpp
        Lib:
-         D:\Program Files\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TAppCommon\TAppCommon.lib" /NOLOGO "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TAppCommon\program_options_lite.obj"
-         TAppCommon_vc10.vcxproj -> C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TAppCommon\TAppCommon.lib
-     1>Done Building Project "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\vc10\TAppCommon_vc10.vcxproj" (Build target(s)).
+         D:\Program Files\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"D:\workspace\hevc-rate-control\build\\vc10\Win32\Debug\TAppCommon\TAppCommon.lib" /NOLOGO "D:\workspace\hevc-rate-control\build\\vc10\Win32\Debug\TAppCommon\program_options_lite.obj"
+         TAppCommon_vc10.vcxproj -> D:\workspace\hevc-rate-control\build\\vc10\Win32\Debug\TAppCommon\TAppCommon.lib
+     1>Done Building Project "D:\workspace\hevc-rate-control\build\vc10\TAppCommon_vc10.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.58
+Time Elapsed 00:00:07.21

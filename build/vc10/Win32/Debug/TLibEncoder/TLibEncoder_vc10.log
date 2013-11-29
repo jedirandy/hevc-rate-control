@@ -1,35 +1,37 @@
-﻿Build started 11/28/2013 18:20:24.
-     1>Project "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\vc10\TLibEncoder_vc10.vcxproj" on node 2 (Build target(s)).
+﻿Build started 11/28/2013 22:44:23.
+     1>Project "D:\workspace\hevc-rate-control\build\vc10\TLibEncoder_vc10.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         D:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\..\source\Lib\\" /I"C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\..\compat\msvc" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _CRT_SECURE_NO_WARNINGS /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibEncoder\\" /Fd"C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibEncoder\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\source\Lib\TLibEncoder\TEncRateCtrl.cpp
+         D:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\workspace\hevc-rate-control\build\\..\source\Lib\\" /I"D:\workspace\hevc-rate-control\build\\..\compat\msvc" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _CRT_SECURE_NO_WARNINGS /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"D:\workspace\hevc-rate-control\build\\vc10\Win32\Debug\TLibEncoder\\" /Fd"D:\workspace\hevc-rate-control\build\\vc10\Win32\Debug\TLibEncoder\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\source\Lib\TLibEncoder\TEncRateCtrl.cpp
          TEncRateCtrl.cpp
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.cpp(105): warning C4244: '=' : conversion from 'double' to 'Int', possible loss of data
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.cpp(535): warning C4244: '=' : conversion from 'Int64' to 'Int', possible loss of data
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.cpp(542): warning C4244: '=' : conversion from 'Double' to 'Int', possible loss of data
-     1>c:\users\ran\skydrive\academic\gt\ece6258\hevc project\trunk\source\lib\tlibencoder\tencratectrl.cpp(1963): warning C4244: '=' : conversion from 'Double' to 'Int', possible loss of data
+     1>d:\workspace\hevc-rate-control\source\lib\tlibencoder\tencratectrl.cpp(283): warning C4244: '=' : conversion from 'double' to 'Int', possible loss of data
+     1>d:\workspace\hevc-rate-control\source\lib\tlibencoder\tencratectrl.cpp(713): warning C4244: '=' : conversion from 'Int64' to 'Int', possible loss of data
+     1>d:\workspace\hevc-rate-control\source\lib\tlibencoder\tencratectrl.cpp(720): warning C4244: '=' : conversion from 'Double' to 'Int', possible loss of data
+     1>d:\workspace\hevc-rate-control\source\lib\tlibencoder\tencratectrl.cpp(1910): warning C4244: 'initializing' : conversion from 'double' to 'Int', possible loss of data
+     1>d:\workspace\hevc-rate-control\source\lib\tlibencoder\tencratectrl.cpp(1998): warning C4244: '=' : conversion from 'Double' to 'Int', possible loss of data
+     1>d:\workspace\hevc-rate-control\source\lib\tlibencoder\tencratectrl.cpp(2028): warning C4244: '=' : conversion from 'Double' to 'Int', possible loss of data
        Lib:
-         D:\Program Files\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibEncoder\TLibEncoder.lib" /NOLOGO "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibEncoder\NALwrite.obj"
-         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibEncoder\SEIwrite.obj"
-         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibEncoder\SyntaxElementWriter.obj"
-         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibEncoder\TEncAnalyze.obj"
-         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibEncoder\TEncBinCoderCABAC.obj"
-         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibEncoder\TEncBinCoderCABACCounter.obj"
-         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibEncoder\TEncCavlc.obj"
-         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibEncoder\TEncCu.obj"
-         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibEncoder\TEncEntropy.obj"
-         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibEncoder\TEncGOP.obj"
-         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibEncoder\TEncPic.obj"
-         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibEncoder\TEncPreanalyzer.obj"
-         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibEncoder\TEncRateCtrl.obj"
-         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibEncoder\TEncSampleAdaptiveOffset.obj"
-         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibEncoder\TEncSbac.obj"
-         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibEncoder\TEncSearch.obj"
-         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibEncoder\TEncSlice.obj"
-         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibEncoder\TEncTop.obj"
-         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibEncoder\WeightPredAnalysis.obj"
-         TLibEncoder_vc10.vcxproj -> C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TLibEncoder\TLibEncoder.lib
-     1>Done Building Project "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\vc10\TLibEncoder_vc10.vcxproj" (Build target(s)).
+         D:\Program Files\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"D:\workspace\hevc-rate-control\build\\vc10\Win32\Debug\TLibEncoder\TLibEncoder.lib" /NOLOGO "D:\workspace\hevc-rate-control\build\\vc10\Win32\Debug\TLibEncoder\NALwrite.obj"
+         "D:\workspace\hevc-rate-control\build\\vc10\Win32\Debug\TLibEncoder\SEIwrite.obj"
+         "D:\workspace\hevc-rate-control\build\\vc10\Win32\Debug\TLibEncoder\SyntaxElementWriter.obj"
+         "D:\workspace\hevc-rate-control\build\\vc10\Win32\Debug\TLibEncoder\TEncAnalyze.obj"
+         "D:\workspace\hevc-rate-control\build\\vc10\Win32\Debug\TLibEncoder\TEncBinCoderCABAC.obj"
+         "D:\workspace\hevc-rate-control\build\\vc10\Win32\Debug\TLibEncoder\TEncBinCoderCABACCounter.obj"
+         "D:\workspace\hevc-rate-control\build\\vc10\Win32\Debug\TLibEncoder\TEncCavlc.obj"
+         "D:\workspace\hevc-rate-control\build\\vc10\Win32\Debug\TLibEncoder\TEncCu.obj"
+         "D:\workspace\hevc-rate-control\build\\vc10\Win32\Debug\TLibEncoder\TEncEntropy.obj"
+         "D:\workspace\hevc-rate-control\build\\vc10\Win32\Debug\TLibEncoder\TEncGOP.obj"
+         "D:\workspace\hevc-rate-control\build\\vc10\Win32\Debug\TLibEncoder\TEncPic.obj"
+         "D:\workspace\hevc-rate-control\build\\vc10\Win32\Debug\TLibEncoder\TEncPreanalyzer.obj"
+         "D:\workspace\hevc-rate-control\build\\vc10\Win32\Debug\TLibEncoder\TEncRateCtrl.obj"
+         "D:\workspace\hevc-rate-control\build\\vc10\Win32\Debug\TLibEncoder\TEncSampleAdaptiveOffset.obj"
+         "D:\workspace\hevc-rate-control\build\\vc10\Win32\Debug\TLibEncoder\TEncSbac.obj"
+         "D:\workspace\hevc-rate-control\build\\vc10\Win32\Debug\TLibEncoder\TEncSearch.obj"
+         "D:\workspace\hevc-rate-control\build\\vc10\Win32\Debug\TLibEncoder\TEncSlice.obj"
+         "D:\workspace\hevc-rate-control\build\\vc10\Win32\Debug\TLibEncoder\TEncTop.obj"
+         "D:\workspace\hevc-rate-control\build\\vc10\Win32\Debug\TLibEncoder\WeightPredAnalysis.obj"
+         TLibEncoder_vc10.vcxproj -> D:\workspace\hevc-rate-control\build\\vc10\Win32\Debug\TLibEncoder\TLibEncoder.lib
+     1>Done Building Project "D:\workspace\hevc-rate-control\build\vc10\TLibEncoder_vc10.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:02.59
+Time Elapsed 00:00:04.38
