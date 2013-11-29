@@ -1,17 +1,17 @@
-﻿Build started 11/28/2013 12:05:01.
-     1>Project "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\vc10\TAppDecoder_vc10.vcxproj" on node 3 (Build target(s)).
+﻿Build started 11/28/2013 23:22:53.
+     1>Project "D:\workspace\hevc-rate-control\build\vc10\TAppDecoder_vc10.vcxproj" on node 2 (Build target(s)).
      1>Link:
-         D:\Program Files\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\..\bin\vc10\Win32\Debug\TAppDecoder.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\..\bin\vc10\Win32\Debug\TAppDecoder.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\..\bin\vc10\Win32\Debug\TAppDecoder.lib" /MACHINE:X86 /SAFESEH "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TAppDecoder\decmain.obj"
-         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TAppDecoder\TAppDecCfg.obj"
-         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\vc10\Win32\Debug\TAppDecoder\TAppDecTop.obj"
-         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\vc10\Win32\Debug\TAppCommon\TAppCommon.lib"
-         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\vc10\Win32\Debug\TLibCommon\TLibCommon.lib"
-         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\vc10\Win32\Debug\TLibDecoder\TLibDecoder.lib"
-         "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\vc10\Win32\Debug\TLibVideoIo\TLibVideoIO.lib"
+         D:\Program Files\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\workspace\hevc-rate-control\build\\..\bin\vc10\Win32\Debug\TAppDecoder.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\workspace\hevc-rate-control\build\\..\bin\vc10\Win32\Debug\TAppDecoder.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\workspace\hevc-rate-control\build\\..\bin\vc10\Win32\Debug\TAppDecoder.lib" /MACHINE:X86 /SAFESEH "D:\workspace\hevc-rate-control\build\\vc10\Win32\Debug\TAppDecoder\decmain.obj"
+         "D:\workspace\hevc-rate-control\build\\vc10\Win32\Debug\TAppDecoder\TAppDecCfg.obj"
+         "D:\workspace\hevc-rate-control\build\\vc10\Win32\Debug\TAppDecoder\TAppDecTop.obj"
+         "D:\workspace\hevc-rate-control\build\vc10\Win32\Debug\TAppCommon\TAppCommon.lib"
+         "D:\workspace\hevc-rate-control\build\vc10\Win32\Debug\TLibCommon\TLibCommon.lib"
+         "D:\workspace\hevc-rate-control\build\vc10\Win32\Debug\TLibDecoder\TLibDecoder.lib"
+         "D:\workspace\hevc-rate-control\build\vc10\Win32\Debug\TLibVideoIo\TLibVideoIO.lib"
      1>decmain.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
-         TAppDecoder_vc10.vcxproj -> C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\\..\bin\vc10\Win32\Debug\TAppDecoder.exe
-     1>Done Building Project "C:\Users\Ran\SkyDrive\Academic\GT\ECE6258\HEVC Project\trunk\build\vc10\TAppDecoder_vc10.vcxproj" (Build target(s)).
+         TAppDecoder_vc10.vcxproj -> D:\workspace\hevc-rate-control\build\\..\bin\vc10\Win32\Debug\TAppDecoder.exe
+     1>Done Building Project "D:\workspace\hevc-rate-control\build\vc10\TAppDecoder_vc10.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:04.36
+Time Elapsed 00:00:08.98

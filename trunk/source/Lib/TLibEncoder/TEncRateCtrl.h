@@ -71,7 +71,7 @@ typedef struct FrameData
 	Int        m_qp;
 	Int        m_bits;
 	Double     m_costMAD;
-	Double	   m_qpRatio;
+	Int		   m_layer; // # Indicates the layer of the frame
 }FrameData;
 
 typedef struct LCUData
@@ -83,6 +83,28 @@ typedef struct LCUData
 	Int     m_heightInPixel;     ///<  number of pixels for height
 	Double  m_costMAD;           ///<  texture complexity for a unit
 }LCUData;
+
+struct LayerData{
+	Double m_alpha[3]; 
+
+	LayerData(){
+		for (Int i = 0; i < 3; i++){
+			m_alpha[i] = 0;
+		}
+	}
+
+	~LayerData(){
+		//delete[] m_alpha;
+	}
+
+	void setData(Int layerIdx, Double val){
+		m_alpha[layerIdx] = val;
+	}
+
+	Double getData(Int layerIdx){
+		return m_alpha[layerIdx];
+	}
+};
 
 class MADLinearModel
 {
@@ -100,7 +122,7 @@ public:
 	Double  getMAD();
 	Double  getMAD(Double coeff) { return getMAD()*coeff; }
 
-	Void    updateMADLiearModel();
+	Void    updateMADLinearModel();
 	Void    updateMADHistory(Double costMAD);
 	Bool    IsUpdateAvailable()              { return m_activeOn; }
 };
@@ -490,7 +512,8 @@ public:
 	TEncRCPic* getRCPic()          { assert(m_encRCPic != NULL); return m_encRCPic; }
 	list<TEncRCPic*>& getPicList() { return m_listRCPictures; }
 	Void updateQPStepRatio();
-	Int estPicTargetBits();
+	Int estPicTargetBits(Int layer);
+	Int estGOPTargetBits(Int GOPSize);
 private:
 	TEncRCSeq* m_encRCSeq;
 	TEncRCGOP* m_encRCGOP;
@@ -524,7 +547,7 @@ private:
 	Int             m_initialOVB;
 	Int             m_targetBufLevel;
 	Int             m_initialTBL;
-	Int             m_remainingBitsInGOP;
+	Int             m_remainingBitsInGOP; 
 	Int             m_remainingBitsInFrame;
 	Int             m_occupancyVBInFrame;
 	Int             m_targetBits;
@@ -535,6 +558,15 @@ private:
 	Double          m_costRefAvgWeighting;
 	Double          m_costAvgbpp;         
 
+	// # new
+	Int			    m_remainingFrames;
+	Int	            m_remainingBits;
+	Int             m_totalFrames;
+	Int             m_targetBitsInGOP;
+	Int             m_targetBitsInPrevGOP;
+	std::vector<LayerData> m_vLayerData;
+	// #
+
 	FrameData*      m_pcFrameData;
 	LCUData*        m_pcLCUData;
 
@@ -542,10 +574,11 @@ private:
 	PixelBaseURQQuadraticModel  m_cPixelURQQuadraticModel;
 
 public:
-	Void          create                (Int sizeIntraPeriod, Int sizeGOP, Int frameRate, Int targetKbps, Int qp, Int numLCUInBasicUnit, Int sourceWidth, Int sourceHeight, Int maxCUWidth, Int maxCUHeight);
+	Void          create                (Int totalFrames, Int sizeIntraPeriod, Int sizeGOP, Int frameRate, Int targetKbps, Int qp, Int numLCUInBasicUnit, Int sourceWidth, Int sourceHeight, Int maxCUWidth, Int maxCUHeight);
 
 	Void          initFrameData         (Int qp = 0);
 	Void          initUnitData          (Int qp = 0);
+	Void          initLayerData();
 	Int           getFrameQP            (Bool isReferenced, Int POC);
 	Bool          calculateUnitQP       ();
 	Int           getUnitQP             ()                                          { return m_pcLCUData[m_indexLCU].m_qp;  }
