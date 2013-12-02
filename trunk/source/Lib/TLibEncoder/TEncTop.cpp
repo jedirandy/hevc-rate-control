@@ -122,7 +122,7 @@ Void TEncTop::create ()
 	
   }
 #else
-  m_cRateCtrl.create(getIntraPeriod(), getGOPSize(), getFrameRate(), getTargetBitrate(), getQP(), getNumLCUInUnit(), getSourceWidth(), getSourceHeight(), g_uiMaxCUWidth, g_uiMaxCUHeight);
+  m_cRateCtrl.create(m_framesToBeEncoded, getIntraPeriod(), getGOPSize(), getFrameRate(), getTargetBitrate(), getQP(), getNumLCUInUnit(), getSourceWidth(), getSourceHeight(), g_uiMaxCUWidth, g_uiMaxCUHeight);
 #endif
   // if SBAC-based RD optimization is used
   if( m_bUseSBACRD )

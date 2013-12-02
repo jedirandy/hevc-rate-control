@@ -1,5 +1,5 @@
-﻿Build started 11/28/2013 20:51:32.
-     1>Project "D:\workspace\hevc-rate-control\build\vc10\TLibVideoIO_vc10.vcxproj" on node 4 (Build target(s)).
+﻿Build started 11/29/2013 23:38:36.
+     1>Project "D:\workspace\hevc-rate-control\build\vc10\TLibVideoIO_vc10.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          D:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\workspace\hevc-rate-control\build\\..\source\Lib\\" /I"D:\workspace\hevc-rate-control\build\\..\compat\msvc" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _CRT_SECURE_NO_WARNINGS /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"D:\workspace\hevc-rate-control\build\\vc10\Win32\Debug\TLibVideoIo\\" /Fd"D:\workspace\hevc-rate-control\build\\vc10\Win32\Debug\TLibVideoIo\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\source\Lib\TLibVideoIO\TVideoIOYuv.cpp
          TVideoIOYuv.cpp
@@ -10,4 +10,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:06.57
+Time Elapsed 00:00:07.30
