@@ -1882,7 +1882,7 @@ Void TEncGOP::compressGOP( Int iPOCLast, Int iNumPicRcvd, TComList<TComPic*>& rc
     
     delete[] pcSubstreamsOut;
   }
-#if RATE_CONTROL_LAMBDA_DOMAIN
+#if !RATE_CONTROL_LAMBDA_DOMAIN
   if(m_pcCfg->getUseRateCtrl())
   {
     m_pcRateCtrl->updateRCGOPStatus();

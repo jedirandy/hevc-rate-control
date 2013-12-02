@@ -599,12 +599,34 @@ public:
 #define MAX_DELTA_QP    2
 #define MAX_CUDQP_DEPTH 0 
 
+struct LayerData{
+	Double m_alpha[3];
+
+	LayerData(){
+		for (Int i = 0; i < 3; i++){
+			m_alpha[i] = 0;
+		}
+	}
+
+	~LayerData(){
+	}
+
+	void setData(Int layerIdx, Double val){
+		m_alpha[layerIdx] = val;
+	}
+
+	Double getData(Int layerIdx){
+		return m_alpha[layerIdx];
+	}
+};
+
 typedef struct FrameData
 {
-  Bool       m_isReferenced;
-  Int        m_qp;
-  Int        m_bits;
-  Double     m_costMAD;
+	Bool       m_isReferenced;
+	Int        m_qp;
+	Int        m_bits;
+	Double     m_costMAD;
+	Int		   m_layer; // # Indicates the layer of the frame
 }FrameData;
 
 typedef struct LCUData
@@ -631,7 +653,8 @@ public:
   
   Void    initMADLinearModel      ();
   Double  getMAD                  ();
-  Void    updateMADLiearModel     ();
+  Double  getMAD(Double coeff)	{ return getMAD()*coeff; } // Return the MAD mutiplied by the coeff
+  Void    updateMADLinearModel     ();
   Void    updateMADHistory        (Double costMAD);
   Bool    IsUpdateAvailable       ()              { return m_activeOn; }
 };
@@ -691,6 +714,17 @@ private:
   Double          m_costRefAvgWeighting;
   Double          m_costAvgbpp;         
   
+  // # new
+  Int			  m_remainingFrames;
+  Int	          m_remainingBits;
+  Int             m_totalFrames;
+  Int             m_targetBitsInGOP;
+  Int             m_targetBitsInPrevGOP;
+  std::vector<LayerData> m_vLayerData;
+  Double		  m_qpStepRatios[5];
+  Int			  m_initQP;
+  // #
+
   FrameData*      m_pcFrameData;
   LCUData*        m_pcLCUData;
 
@@ -701,9 +735,10 @@ public:
   TEncRateCtrl         () {};
   virtual ~TEncRateCtrl() {};
 
-  Void          create                (Int sizeIntraPeriod, Int sizeGOP, Int frameRate, Int targetKbps, Int qp, Int numLCUInBasicUnit, Int sourceWidth, Int sourceHeight, Int maxCUWidth, Int maxCUHeight);
+  Void          create				  (Int totalFrames, Int sizeIntraPeriod, Int sizeGOP, Int frameRate, Int targetBitrate, Int qp, Int numLCUInBasicUnit, Int sourceWidth, Int sourceHeight, Int maxCUWidth, Int maxCUHeight);
   Void          destroy               ();
 
+  Void			initLayerData		  ();
   Void          initFrameData         (Int qp = 0);
   Void          initUnitData          (Int qp = 0);
   Int           getFrameQP            (Bool isReferenced, Int POC);
@@ -716,6 +751,9 @@ public:
   Void          updateFrameData       (UInt64 actualFrameBits);
   Double        xAdjustmentBits       (Int& reductionBits, Int& compensationBits);
   Int           getGOPId              ()                                          { return m_indexFrame; }
+  Void	updateQPStepRatio();
+  Int	estPicTargetBits(Int layer);
+  Int	estGOPTargetBits(Int GOPSize);
 };
 #endif
 
