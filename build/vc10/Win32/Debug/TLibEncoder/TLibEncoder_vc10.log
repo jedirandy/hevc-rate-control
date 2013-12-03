@@ -1,11 +1,12 @@
-﻿Build started 11/30/2013 01:53:40.
+﻿Build started 12/3/2013 22:11:52.
      1>Project "D:\workspace\hevc-rate-control\build\vc10\TLibEncoder_vc10.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         D:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\workspace\hevc-rate-control\build\\..\source\Lib\\" /I"D:\workspace\hevc-rate-control\build\\..\compat\msvc" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _CRT_SECURE_NO_WARNINGS /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"D:\workspace\hevc-rate-control\build\\vc10\Win32\Debug\TLibEncoder\\" /Fd"D:\workspace\hevc-rate-control\build\\vc10\Win32\Debug\TLibEncoder\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\source\Lib\TLibEncoder\TEncRateCtrl.cpp
+         D:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\workspace\hevc-rate-control\build\\..\source\Lib\\" /I"D:\workspace\hevc-rate-control\build\\..\compat\msvc" /Z7 /nologo /W3 /WX- /Ox /Ot /Oy- /D WIN32 /D _DEBUG /D _LIB /D _CRT_SECURE_NO_WARNINGS /D _MBCS /Gm /EHsc /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"D:\workspace\hevc-rate-control\build\\vc10\Win32\Debug\TLibEncoder\\" /Fd"D:\workspace\hevc-rate-control\build\\vc10\Win32\Debug\TLibEncoder\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\source\Lib\TLibEncoder\TEncRateCtrl.cpp
+     1>cl : Command line warning D9007: '/Gm' requires '/Zi or /ZI'; option ignored
          TEncRateCtrl.cpp
-     1>d:\workspace\hevc-rate-control\source\lib\tlibencoder\tencratectrl.cpp(2621): warning C4244: 'initializing' : conversion from 'double' to 'Int', possible loss of data
-     1>d:\workspace\hevc-rate-control\source\lib\tlibencoder\tencratectrl.cpp(2711): warning C4244: '=' : conversion from 'Double' to 'Int', possible loss of data
-     1>d:\workspace\hevc-rate-control\source\lib\tlibencoder\tencratectrl.cpp(2742): warning C4244: '=' : conversion from 'Double' to 'Int', possible loss of data
+     1>..\..\source\Lib\TLibEncoder\TEncRateCtrl.cpp(1881): warning C4244: 'initializing' : conversion from 'double' to 'Int', possible loss of data
+     1>..\..\source\Lib\TLibEncoder\TEncRateCtrl.cpp(1968): warning C4244: '=' : conversion from 'Double' to 'Int', possible loss of data
+     1>..\..\source\Lib\TLibEncoder\TEncRateCtrl.cpp(1990): warning C4244: '=' : conversion from 'Double' to 'Int', possible loss of data
        Lib:
          D:\Program Files\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"D:\workspace\hevc-rate-control\build\\vc10\Win32\Debug\TLibEncoder\TLibEncoder.lib" /NOLOGO "D:\workspace\hevc-rate-control\build\\vc10\Win32\Debug\TLibEncoder\NALwrite.obj"
          "D:\workspace\hevc-rate-control\build\\vc10\Win32\Debug\TLibEncoder\SEIwrite.obj"
@@ -31,4 +32,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.56
+Time Elapsed 00:00:02.38

@@ -1,12 +1,12 @@
-﻿Build started 11/29/2013 23:38:36.
-     1>Project "D:\workspace\hevc-rate-control\build\vc10\TLibCommon_vc10.vcxproj" on node 3 (Build target(s)).
+﻿Build started 12/3/2013 21:05:39.
+     1>Project "D:\workspace\hevc-rate-control\build\vc10\TLibCommon_vc10.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         D:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\workspace\hevc-rate-control\build\\..\source\Lib\\" /I"D:\workspace\hevc-rate-control\build\\..\compat\msvc" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _CRT_SECURE_NO_WARNINGS /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"D:\workspace\hevc-rate-control\build\\vc10\Win32\Debug\TLibCommon\\" /Fd"D:\workspace\hevc-rate-control\build\\vc10\Win32\Debug\TLibCommon\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\source\Lib\TLibCommon\ContextModel.cpp ..\..\source\Lib\TLibCommon\ContextModel3DBuffer.cpp ..\..\source\Lib\TLibCommon\SEI.cpp ..\..\source\Lib\TLibCommon\TComBitStream.cpp ..\..\source\Lib\TLibCommon\TComCABACTables.cpp ..\..\source\Lib\TLibCommon\TComDataCU.cpp ..\..\source\Lib\TLibCommon\TComInterpolationFilter.cpp ..\..\source\Lib\TLibCommon\TComLoopFilter.cpp ..\..\source\Lib\TLibCommon\TComMotionInfo.cpp ..\..\source\Lib\TLibCommon\TComPattern.cpp ..\..\source\Lib\TLibCommon\TComPic.cpp ..\..\source\Lib\TLibCommon\TComPicSym.cpp ..\..\source\Lib\TLibCommon\TComPicYuv.cpp ..\..\source\Lib\TLibCommon\TComPicYuvMD5.cpp ..\..\source\Lib\TLibCommon\TComPrediction.cpp ..\..\source\Lib\TLibCommon\TComRdCost.cpp ..\..\source\Lib\TLibCommon\TComRdCostWeightPrediction.cpp ..\..\source\Lib\TLibCommon\TComRom.cpp ..\..\source\Lib\TLibCommon\TComSampleAdaptiveOffset.cpp ..\..\source\Lib\TLibCommon\TComSlice.cpp ..\..\source\Lib\TLibCommon\TComTrQuant.cpp ..\..\source\Lib\TLibCommon\TComWeightPrediction.cpp ..\..\source\Lib\TLibCommon\TComYuv.cpp
+         D:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\workspace\hevc-rate-control\build\\..\source\Lib\\" /I"D:\workspace\hevc-rate-control\build\\..\compat\msvc" /Zi /nologo /W3 /WX- /Ox /Oy- /D WIN32 /D _DEBUG /D _LIB /D _CRT_SECURE_NO_WARNINGS /D _MBCS /Gm /EHsc /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"D:\workspace\hevc-rate-control\build\\vc10\Win32\Debug\TLibCommon\\" /Fd"D:\workspace\hevc-rate-control\build\\vc10\Win32\Debug\TLibCommon\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\source\Lib\TLibCommon\ContextModel.cpp ..\..\source\Lib\TLibCommon\ContextModel3DBuffer.cpp ..\..\source\Lib\TLibCommon\SEI.cpp ..\..\source\Lib\TLibCommon\TComBitStream.cpp ..\..\source\Lib\TLibCommon\TComCABACTables.cpp ..\..\source\Lib\TLibCommon\TComDataCU.cpp ..\..\source\Lib\TLibCommon\TComInterpolationFilter.cpp ..\..\source\Lib\TLibCommon\TComLoopFilter.cpp ..\..\source\Lib\TLibCommon\TComMotionInfo.cpp ..\..\source\Lib\TLibCommon\TComPattern.cpp ..\..\source\Lib\TLibCommon\TComPic.cpp ..\..\source\Lib\TLibCommon\TComPicSym.cpp ..\..\source\Lib\TLibCommon\TComPicYuv.cpp ..\..\source\Lib\TLibCommon\TComPicYuvMD5.cpp ..\..\source\Lib\TLibCommon\TComPrediction.cpp ..\..\source\Lib\TLibCommon\TComRdCost.cpp ..\..\source\Lib\TLibCommon\TComRdCostWeightPrediction.cpp ..\..\source\Lib\TLibCommon\TComRom.cpp ..\..\source\Lib\TLibCommon\TComSampleAdaptiveOffset.cpp ..\..\source\Lib\TLibCommon\TComSlice.cpp ..\..\source\Lib\TLibCommon\TComTrQuant.cpp ..\..\source\Lib\TLibCommon\TComWeightPrediction.cpp ..\..\source\Lib\TLibCommon\TComYuv.cpp
          TComYuv.cpp
          TComWeightPrediction.cpp
          TComTrQuant.cpp
          TComSlice.cpp
-     1>d:\workspace\hevc-rate-control\source\lib\tlibcommon\tcomslice.cpp : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+     1>..\..\source\Lib\TLibCommon\TComSlice.cpp : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
          TComSampleAdaptiveOffset.cpp
          TComRom.cpp
          TComRdCostWeightPrediction.cpp
@@ -29,6 +29,8 @@
          ContextModel3DBuffer.cpp
          ContextModel.cpp
          Generating Code...
+         D:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\workspace\hevc-rate-control\build\\..\source\Lib\\" /I"D:\workspace\hevc-rate-control\build\\..\compat\msvc" /Zi /nologo /W3 /WX- /Ox /Oy- /D WIN32 /D _DEBUG /D _LIB /D _CRT_SECURE_NO_WARNINGS /D _MBCS /Gm /EHsc /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"D:\workspace\hevc-rate-control\build\\vc10\Win32\Debug\TLibCommon\\" /Fd"D:\workspace\hevc-rate-control\build\\vc10\Win32\Debug\TLibCommon\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt ..\..\source\Lib\libmd5\libmd5.c
+         libmd5.c
        Lib:
          D:\Program Files\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"D:\workspace\hevc-rate-control\build\\vc10\Win32\Debug\TLibCommon\TLibCommon.lib" /NOLOGO "D:\workspace\hevc-rate-control\build\\vc10\Win32\Debug\TLibCommon\ContextModel.obj"
          "D:\workspace\hevc-rate-control\build\\vc10\Win32\Debug\TLibCommon\ContextModel3DBuffer.obj"
@@ -59,4 +61,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:26.31
+Time Elapsed 00:00:29.61
