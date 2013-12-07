@@ -1806,7 +1806,6 @@ Int     PixelBaseURQQuadraticModel::xConvertQStep2QP(Double qStep)
 }
 
 
-// # Hybrid
 Void  TEncRateCtrl::create(Int totalFrames, Int sizeIntraPeriod, Int sizeGOP, Int frameRate, Int targetBitrate, Int qp, Int numLCUInBasicUnit, Int sourceWidth, Int sourceHeight, Int maxCUWidth, Int maxCUHeight)
 {
 	Int leftInHeight, leftInWidth;
@@ -1814,9 +1813,8 @@ Void  TEncRateCtrl::create(Int totalFrames, Int sizeIntraPeriod, Int sizeGOP, In
 	m_sourceWidthInLCU = (sourceWidth / maxCUWidth) + ((sourceWidth  %  maxCUWidth) ? 1 : 0);
 	m_sourceHeightInLCU = (sourceHeight / maxCUHeight) + ((sourceHeight %  maxCUHeight) ? 1 : 0);
 	m_isLowdelay = (sizeIntraPeriod == -1) ? true : false;
-	// in unit of bps
-	m_prevBitrate = targetBitrate;
-	m_currBitrate = targetBitrate;
+	m_prevBitrate = targetBitrate; 	// in unit of bps
+	m_currBitrate = targetBitrate;	// in unit of bps
 	m_frameRate = frameRate;
 	m_refFrameNum = m_isLowdelay ? (sizeGOP) : (sizeGOP >> 1);
 	m_nonRefFrameNum = sizeGOP - m_refFrameNum;
@@ -1833,31 +1831,28 @@ Void  TEncRateCtrl::create(Int totalFrames, Int sizeIntraPeriod, Int sizeGOP, In
 	m_targetBufLevel = 0;
 	m_initialTBL = 0;
 	m_occupancyVBInFrame = 0;
-	// # new
 	m_totalFrames = totalFrames;
 	m_remainingFrames = totalFrames;
-	m_remainingBits = targetBitrate * totalFrames / frameRate;
+	m_remainingBits = targetBitrate * totalFrames / frameRate; // Initially, the remaining bits = total bits to be encoded
 	m_targetBitsInPrevGOP = 0;
-	m_targetBitsInGOP = estGOPTargetBits(1); // first frame (I-Slice)'s GOP size is considered as  1
+	m_targetBitsInGOP = estGOPTargetBits(1); // Note that the first frame (I-Slice)'s GOP size is considered as  1
 	m_initQP = qp;
-	//m_remainingBitsInGOP = (m_currBitrate*sizeGOP / m_frameRate);
 	m_remainingBitsInGOP = m_targetBitsInGOP; 
 	m_remainingBitsInFrame = 0;
+	m_headerAlpha = 0;
+	m_headerBeta = 0;
+	m_mvd = 0;
 	m_numUnitInFrame = m_sourceWidthInLCU*m_sourceHeightInLCU;
 	m_cMADLinearModel.initMADLinearModel();
 	m_cPixelURQQuadraticModel.initPixelBaseQuadraticModel();
-
-
 
 	m_costRefAvgWeighting = 0.0;
 	m_costNonRefAvgWeighting = 0.0;
 	m_costAvgbpp = 0.0;
 	m_activeUnitLevelOn = false;
 
-	m_pcFrameData = new FrameData[sizeGOP];         
-	initFrameData(qp);
-	m_pcLCUData = new LCUData[m_numUnitInFrame];  
-	initUnitData(qp);
+	m_pcFrameData = new FrameData[sizeGOP + 1];         initFrameData(qp);
+	m_pcLCUData = new LCUData[m_numUnitInFrame];  initUnitData(qp);
 
 	for (Int i = 0, addressUnit = 0; i < m_sourceHeightInLCU*maxCUHeight; i += maxCUHeight)
 	{
@@ -1907,28 +1902,31 @@ Void TEncRateCtrl::initLayerData(){
 Void  TEncRateCtrl::initFrameData(Int qp)
 {
 	Int layer;
-	for (Int i = 0; i < m_sizeGOP; i++)
+	for (Int i = 0; i <= m_sizeGOP; i++)
 	{
 		m_pcFrameData[i].m_isReferenced = false;
 		m_pcFrameData[i].m_costMAD = 0.0;
 		m_pcFrameData[i].m_bits = 0;
-		// # eq 1
-		// QP-POC relation
+		
 		Int tQP;
 		switch (i){
 		case 0:
+			layer = 0;
+			tQP = qp;
+			break;
+		case 1:
 			layer = 2;
 			tQP = qp + 3;
 			break;
-		case 1:
+		case 2:
 			layer = 1;
 			tQP = qp + 2;
 			break;
-		case 2:
+		case 3:
 			layer = 2;
 			tQP = qp + 3;
 			break;
-		case 3:
+		case 4:
 			layer = 0;
 			tQP = qp + 1;
 			break;
@@ -1949,6 +1947,14 @@ Void  TEncRateCtrl::initUnitData(Int qp)
 		m_pcLCUData[i].m_heightInPixel = 0;
 		m_pcLCUData[i].m_costMAD = 0.0;
 	}
+}
+
+Int TEncRateCtrl::estHeaderBits(){
+	Int headerBits;
+	// # eq (5): T_h = alpha * (Num_pu + beta * MVD) + gamma
+	// where gamma is very small and can be set as zero
+	headerBits = m_headerAlpha * (m_headerBeta * m_numUnitInFrame + m_mvd);
+	return headerBits;
 }
 
 Int TEncRateCtrl::estGOPTargetBits(Int GOPSize){
@@ -1973,10 +1979,13 @@ Int TEncRateCtrl::estGOPTargetBits(Int GOPSize){
 
 Int TEncRateCtrl::estPicTargetBits(Int layer){
 	Int targetBits;
-	Double alpha;
-	if (m_indexGOP == 0){ // Exception for the first frame(I)
-		alpha = 1;
+	m_indexGOP; 
+	if (layer > 2){
+		layer = 2;
 	}
+	Double alpha;
+	if (m_indexGOP == 0)
+		alpha = 1;
 	else if (m_indexGOP < 4){
 		alpha = m_vLayerData.at(0).getData(layer);
 	}
@@ -1985,9 +1994,15 @@ Int TEncRateCtrl::estPicTargetBits(Int layer){
 						 m_vLayerData.at(m_indexGOP - 2).getData(layer) +
 					     m_vLayerData.at(m_indexGOP - 3).getData(layer));
 	}
-	m_vLayerData.at(m_indexGOP).setData(layer,alpha); // Update the alpha for the layer
+	m_vLayerData.at(m_indexGOP).setData(layer,alpha); // # Update the alpha for the layer
+	Int GOPSize = m_indexGOP == 0 ? 1 : m_sizeGOP;
+	if (GOPSize>m_remainingFrames)
+		GOPSize = m_remainingFrames;
+	targetBits = estGOPTargetBits(GOPSize);
 	// # eq (5): T_i,j = Alpha_i,j * T'_RateGop
-	targetBits = m_targetBitsInGOP * alpha;	
+	if (GOPSize != 0){
+		targetBits = alpha * targetBits;
+	}
 	return targetBits;
 }
 
@@ -1998,39 +2013,25 @@ Int  TEncRateCtrl::getFrameQP(Bool isReferenced, Int POC)
 	FrameData* pcFrameData;
 
 	m_indexPOCInGOP = (POC%m_sizeGOP) == 0 ? m_sizeGOP : (POC%m_sizeGOP);
-	m_indexPOCInGOP--;
-	std::cout << "est targetbits " << m_targetBits << std::endl;
-	std::cout << "m_indexPOCInGOP " << m_indexPOCInGOP << std::endl;
-	std::cout << "m_indexPrevPOCInGOP" << m_indexPrevPOCInGOP << std::endl;
 	pcFrameData = &m_pcFrameData[m_indexPOCInGOP];
 
 	if (m_indexGOP != 0)
 	{
 		if (isReferenced)
 		{
-			//Double gamma = m_isLowdelay ? 0.5 : 0.25;
-			//Double beta = m_isLowdelay ? 0.9 : 0.6;
-			//Int    numRemainingRefFrames = m_refFrameNum - m_indexRefFrame;
-			//Int    numRemainingNRefFrames = m_nonRefFrameNum - m_indexNonRefFrame;
+			// # estimate the targetbits for the frame
+			m_targetBits = estPicTargetBits(pcFrameData->m_layer) - estHeaderBits();
 
-			//Double targetBitsOccupancy = (m_currBitrate / (Double)m_frameRate) + gamma*(m_targetBufLevel - m_occupancyVB - (m_initialOVB / (Double)m_frameRate));
-			//Double targetBitsLeftBudget = ((m_costRefAvgWeighting*m_remainingBitsInGOP) / ((m_costRefAvgWeighting*numRemainingRefFrames) + (m_costNonRefAvgWeighting*numRemainingNRefFrames)));
-
-			//m_targetBits = (Int)(beta * targetBitsLeftBudget + (1 - beta) * targetBitsOccupancy);
-
-			// # new
-			m_targetBits = estPicTargetBits(pcFrameData->m_layer);
 			if (m_targetBits <= 0 || m_remainingBitsInGOP <= 0)
 			{
 				finalQP = m_pcFrameData[m_indexPrevPOCInGOP].m_qp + 2;
 			}
 			else
 			{
-				// # new
 				// # eq(10) MAD' = QP_step_ratio * MAD;
 				Double costPredMAD = m_cMADLinearModel.getMAD(m_qpStepRatios[m_indexPOCInGOP]);
-				Int    qpLowerBound = m_pcFrameData[m_indexPrevPOCInGOP].m_qp - 2;
-				Int    qpUpperBound = m_pcFrameData[m_indexPrevPOCInGOP].m_qp + 2;
+				Int    qpLowerBound = m_pcFrameData[m_indexPrevPOCInGOP].m_qp - 3;
+				Int    qpUpperBound = m_pcFrameData[m_indexPrevPOCInGOP].m_qp + 3;
 				finalQP = m_cPixelURQQuadraticModel.getQP(m_pcFrameData[m_indexPrevPOCInGOP].m_qp, m_targetBits, m_numOfPixels, costPredMAD);
 				finalQP = max(qpLowerBound, min(qpUpperBound, finalQP));
 				m_activeUnitLevelOn = true;
@@ -2103,6 +2104,7 @@ Int  TEncRateCtrl::getFrameQP(Bool isReferenced, Int POC)
 
 	pcFrameData->m_isReferenced = isReferenced;
 	pcFrameData->m_qp = finalQP;
+
 	return finalQP;
 }
 
@@ -2155,10 +2157,10 @@ Void  TEncRateCtrl::updateRCGOPStatus()
 
 	//m_remainingBitsInGOP = ((m_currBitrate / m_frameRate)*m_sizeGOP) - m_occupancyVB;
 	m_remainingBitsInGOP = estGOPTargetBits(m_sizeGOP); // Update the target bits for the new GOP
-	//FrameData cFrameData = m_pcFrameData[m_sizeGOP];
+	FrameData cFrameData = m_pcFrameData[m_sizeGOP];
 	initFrameData(m_initQP);
 
-	//m_pcFrameData[0] = cFrameData;
+	m_pcFrameData[0] = cFrameData;
 	m_indexGOP++;
 	m_indexFrame = 0;
 	m_indexRefFrame = 0;
@@ -2281,12 +2283,12 @@ Void TEncRateCtrl::updateQPStepRatio(){
 Void  TEncRateCtrl::updateFrameData(UInt64 actualFrameBits)
 {
 	Double costMAD = 0.0;
-
 	for (Int i = 0; i < m_numUnitInFrame; i++)
 	{
 		costMAD += m_pcLCUData[i].m_costMAD;
 	}
 
+	// MAD QP step ratio
 	m_pcFrameData[m_indexPOCInGOP].m_costMAD = (costMAD / (Double)m_numUnitInFrame) * m_qpStepRatios[m_indexPOCInGOP];
 	m_pcFrameData[m_indexPOCInGOP].m_bits = (Int)actualFrameBits;
 
