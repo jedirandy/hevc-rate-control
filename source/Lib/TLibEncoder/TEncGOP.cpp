@@ -1349,7 +1349,6 @@ Void TEncGOP::compressGOP( Int iPOCLast, Int iNumPicRcvd, TComList<TComPic*>& rc
 #if RATE_CONTROL_LAMBDA_DOMAIN
           actualHeadBits += ( m_pcEntropyCoder->getNumberOfWrittenBits() - tmpBitsBeforeWriting );
 #endif
-          
           // is it needed?
           {
             if (!sliceSegment)
@@ -1690,11 +1689,6 @@ Void TEncGOP::compressGOP( Int iPOCLast, Int iNumPicRcvd, TComList<TComPic*>& rc
         m_pcRateCtrl->getRCGOP()->updateAfterPicture( estimatedBits );
       }
     }
-	if(m_pcCfg->getUseRateCtrl())
-	{
-		UInt  frameBits = m_vRVM_RP[m_vRVM_RP.size()-1];
-		m_pcRateCtrl->updataRCFrameStatus((Int)frameBits, pcSlice->getSliceType());
-	}
 #else
     if(m_pcCfg->getUseRateCtrl())
     {
